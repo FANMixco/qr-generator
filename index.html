@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>QR Code Generator</title>
+    <meta
+      name="description"
+      content="Simple QR code generator. Create and download QR codes as PNG or JPG instantly."
+    />
+    <meta name="author" content="Federico Navarrete" />
+
+    <!-- Open Graph (basic) -->
+    <meta property="og:title" content="QR Code Generator" />
+    <meta
+      property="og:description"
+      content="Generate and download QR codes instantly."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://federiconavarrete.com" />
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+    <link rel="stylesheet" href="css/index.min.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="card">
+        <h1>QR Code Generator</h1>
+        <p>Paste a link, generate a QR code, and download it as PNG or JPG.</p>
+
+        <div class="input-group">
+          <input id="urlInput" type="url" placeholder="https://example.com" />
+          <button onclick="generateQR()">Generate</button>
+        </div>
+
+        <div class="qr-box">
+          <canvas id="qrCanvas"></canvas>
+        </div>
+
+        <div id="downloads" class="downloads">
+          <a id="downloadPng">Download PNG</a>
+          <a id="downloadJpg" class="secondary">Download JPG</a>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>
+          © <span id="year"></span>
+          <a href="https://federiconavarrete.com" target="_blank">
+            Federico Navarrete
+          </a>
+        </p>
+      </footer>
+    </div>
+
+    <script src="js/index.min.js"></script>
+  </body>
+</html>
