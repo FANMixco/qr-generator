@@ -18,7 +18,17 @@
       content="Generate and download QR codes instantly."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://federiconavarrete.com" />
+    <meta property="og:url" content="https://qr-gen.federiconavarrete.com" />
+    <meta property="og:title" content="QR Code Generator by Federico Navarrete" />
+    <meta property="og:description" content="Simple QR code generator. Create and download QR codes as PNG or JPG instantly.">
+    <meta property="og:image" content="https://qr-gen.federiconavarrete.com/img/preview.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://qr-gen.federiconavarrete.com">
+    <meta property="twitter:title" content="QR Code Generator by Federico Navarrete">
+    <meta property="twitter:description" content="Simple QR code generator. Create and download QR codes as PNG or JPG instantly.">
+    <meta property="twitter:image" content="https://qr-gen.federiconavarrete.com/img/preview.png">    
+    <meta name="theme-color" content="#090a0f">
 
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 
@@ -48,7 +58,7 @@
     <div class="page">
       <div class="card">
         <h1>QR Code Generator</h1>
-        <p>Paste a link, generate a QR code, and download it as PNG or JPG.</p>
+        <p>Paste a link, generate a QR code, and download it as PNG or JPG. No signup needed.</p>
 
         <div class="input-group">
           <input id="urlInput" type="url" placeholder="https://example.com" />
@@ -104,19 +114,6 @@
       }
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-FHG5GPZL6Q"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-FHG5GPZL6Q");
-    </script>
+    <script src="js/gAnalyticsLoad.min.js"></script>
   </body>
 </html>

@@ -1,5 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
 body {
   margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
   font-family: Arial, sans-serif;
   background: #f4f6f8;
   color: #222;
@@ -8,6 +20,7 @@ body {
 }
 
 .page {
+  width: 100%;
   min-height: calc(100vh - 40px);
   display: flex;
   flex-direction: column;
@@ -80,8 +93,8 @@ a:hover {
 }
 
 .qr-box {
-  margin: 24px auto 12px;
-  padding: 20px;
+  margin: 16px auto 8px;
+  padding: 16px;
   border-radius: 14px;
   background:
     linear-gradient(45deg, #eee 25%, transparent 25%),
@@ -136,9 +149,4 @@ canvas {
   color: white;
   cursor: pointer;
   line-height: 1; /* prevents text/height weirdness */
-}
-
-.qr-box {
-  margin: 16px auto 8px;
-  padding: 16px;
 }
