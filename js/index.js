@@ -14,6 +14,31 @@ function generateQR() {
     sizeInput.value = 300;
   }
 
+  // ⚠️ warning for large sizes
+  if (qrSize > 2048) {
+    const newValue = prompt(
+      "Recommended maximum size is 2048px for performance reasons.\n\nYou entered: " +
+        qrSize +
+        "px\n\nYou can adjust it here:",
+      qrSize,
+    );
+
+    if (newValue === null) {
+      // user cancelled → fallback to safe value
+      qrSize = 2048;
+    } else {
+      const parsed = parseInt(newValue, 10);
+
+      if (!Number.isNaN(parsed) && parsed >= 300) {
+        qrSize = parsed;
+      } else {
+        qrSize = 2048;
+      }
+    }
+
+    sizeInput.value = qrSize;
+  }
+
   if (!url) {
     alert("Please enter a link.");
     return;
