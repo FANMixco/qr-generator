@@ -1,6 +1,6 @@
 {
-  "name": "QR Code Generator",
-  "short_name": "QR Gen",
+  "name": "Simple QR Code Generator",
+  "short_name": "Simple QR Gen",
   "icons": [
     {
       "src": "img/android-chrome-192x192.png",
