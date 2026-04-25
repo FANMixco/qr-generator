@@ -87,6 +87,15 @@ button,
   text-decoration: underline;
 }
 
+.downloadBtn {
+  text-decoration: none;
+}
+
+#qrCanvas {
+  max-width: 300px;
+  max-height: 300px;
+}
+
 button:hover,
 a:hover {
   opacity: 0.85;

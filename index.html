@@ -19,16 +19,37 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://qr-gen.federiconavarrete.com" />
-    <meta property="og:title" content="QR Code Generator by Federico Navarrete" />
-    <meta property="og:description" content="Simple QR code generator. Create and download QR codes as PNG or JPG instantly.">
-    <meta property="og:image" content="https://qr-gen.federiconavarrete.com/img/preview.png">
+    <meta
+      property="og:title"
+      content="QR Code Generator by Federico Navarrete"
+    />
+    <meta
+      property="og:description"
+      content="Simple QR code generator. Create and download QR codes as PNG or JPG instantly."
+    />
+    <meta
+      property="og:image"
+      content="https://qr-gen.federiconavarrete.com/img/preview.png"
+    />
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://qr-gen.federiconavarrete.com">
-    <meta property="twitter:title" content="QR Code Generator by Federico Navarrete">
-    <meta property="twitter:description" content="Simple QR code generator. Create and download QR codes as PNG or JPG instantly.">
-    <meta property="twitter:image" content="https://qr-gen.federiconavarrete.com/img/preview.png">    
-    <meta name="theme-color" content="#090a0f">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://qr-gen.federiconavarrete.com"
+    />
+    <meta
+      property="twitter:title"
+      content="QR Code Generator by Federico Navarrete"
+    />
+    <meta
+      property="twitter:description"
+      content="Simple QR code generator. Create and download QR codes as PNG or JPG instantly."
+    />
+    <meta
+      property="twitter:image"
+      content="https://qr-gen.federiconavarrete.com/img/preview.png"
+    />
+    <meta name="theme-color" content="#090a0f" />
 
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 
@@ -58,11 +79,19 @@
     <div class="page">
       <div class="card">
         <h1>QR Code Generator</h1>
-        <p>Paste a link, generate a QR code, and download it as PNG or JPG. No signup needed.</p>
+        <p>
+          Paste a link, generate a QR code, and download it as PNG or JPG. No
+          signup needed.
+        </p>
 
         <div class="input-group">
           <input id="urlInput" type="url" placeholder="https://example.com" />
           <button onclick="generateQR()">Generate</button>
+        </div>
+
+        <div class="size-group">
+          <label for="qrSize">QR size in pixels (min: 300)</label>
+          <input id="qrSize" type="number" min="300" value="1024" step="50" />
         </div>
 
         <div class="qr-box">
@@ -70,14 +99,17 @@
         </div>
 
         <div id="downloads" class="downloads">
-          <a id="downloadPng">Download PNG</a>
-          <a id="downloadJpg" class="secondary">Download JPG</a>
+          <a id="downloadPng" class="downloadBtn">Download PNG</a>
+          <a id="downloadJpg" class="secondary downloadBtn">Download JPG</a>
         </div>
       </div>
 
       <footer class="footer">
         <p>
-          © <span id="year"></span> Built by Federico Navarrete<br>Author of <a href="https://tstories.federiconavarrete.com" target="_blank">Timeless Stories of El Salvador</a>
+          © <span id="year"></span> Built by Federico Navarrete<br />Author of
+          <a href="https://tstories.federiconavarrete.com" target="_blank"
+            >Timeless Stories of El Salvador</a
+          >
         </p>
       </footer>
     </div>

@@ -5,6 +5,14 @@ function generateQR() {
   const downloads = document.getElementById("downloads");
   const downloadPng = document.getElementById("downloadPng");
   const downloadJpg = document.getElementById("downloadJpg");
+  const sizeInput = document.getElementById("qrSize");
+
+  let qrSize = parseInt(sizeInput.value, 10);
+
+  if (Number.isNaN(qrSize) || qrSize < 300) {
+    qrSize = 300;
+    sizeInput.value = 300;
+  }
 
   if (!url) {
     alert("Please enter a link.");
@@ -15,7 +23,7 @@ function generateQR() {
     canvas,
     url,
     {
-      width: 300,
+      width: qrSize,
       margin: 2,
       color: {
         dark: "#000000",
