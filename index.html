@@ -89,9 +89,16 @@
           <button onclick="generateQR()">Generate</button>
         </div>
 
-        <div class="size-group">
-          <label for="qrSize">QR size in pixels (min: 300)</label>
-          <input id="qrSize" type="number" min="300" value="1024" step="50" />
+        <div class="options-grid">
+          <div class="option-field">
+            <label for="qrSize">QR size in pixels</label>
+            <input id="qrSize" type="number" min="300" value="1024" />
+          </div>
+
+          <label class="option-toggle">
+            <input id="invertColors" type="checkbox" />
+            <span>Invert colors</span>
+          </label>
         </div>
 
         <div class="qr-box">
