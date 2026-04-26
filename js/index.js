@@ -45,8 +45,13 @@ function generateQR() {
   }
 
   const invert = document.getElementById("invertColors").checked;
+  const qrColor = document.getElementById("qrColor").value || "#000000";
+  const foregroundColor = invert ? "#ffffff" : qrColor;
+  const backgroundColor = invert ? "#000000" : "#ffffff";
 
-  document.querySelector(".qr-box").classList.toggle("inverted-preview", invert);
+  document
+    .querySelector(".qr-box")
+    .classList.toggle("inverted-preview", invert);
 
   QRCode.toCanvas(
     canvas,
@@ -55,9 +60,9 @@ function generateQR() {
       width: qrSize,
       margin: 2,
       color: {
-  dark: invert ? "#ffffff" : "#000000",
-  light: "#00000000",
-},
+        dark: foregroundColor,
+        light: "#00000000",
+      },
     },
     function (error) {
       if (error) {
@@ -68,10 +73,7 @@ function generateQR() {
       downloadPng.href = canvas.toDataURL("image/png");
       downloadPng.download = "qr-code.png";
 
-      downloadJpg.href = createJpgWithBackground(
-  canvas,
-  invert ? "#000000" : "#ffffff"
-);
+      downloadJpg.href = createJpgWithBackground(canvas, backgroundColor);
       downloadJpg.download = "qr-code.jpg";
 
       downloads.style.display = "block";

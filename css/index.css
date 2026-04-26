@@ -205,6 +205,38 @@ canvas {
   margin: 0;
 }
 
+.advanced-options {
+  margin: -4px 0 16px;
+  text-align: left;
+}
+
+.advanced-options summary {
+  color: #666;
+  cursor: pointer;
+  font-size: 13px;
+  list-style-position: inside;
+}
+
+.color-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: #666;
+  font-size: 13px;
+}
+
+.color-option input {
+  width: 44px;
+  height: 32px;
+  margin: 0;
+  padding: 2px;
+}
+
 .qr-box.inverted-preview {
   background: #000; /* clean black background */
   background-size: 20px 20px;
